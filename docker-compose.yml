@@ -58,7 +58,7 @@ services:
     <<: *logging_defaults
   aoplatform-proxy:
     container_name: aoplatform-proxy
-    image: hub.eulix.xyz/ao-space/platform-proxy:v1.0.0
+    image: registry.ao.space/ao-space/platform-proxy:v1.0.1
     <<: *restart_policy
     healthcheck:
       <<: *healthcheck_defaults
@@ -79,7 +79,7 @@ services:
     <<: *logging_defaults
   aonetwork-server:
     container_name: aonetwork-server
-    image: hub.eulix.xyz/ao-space/gt:server-v1.0.0
+    image: registry.ao.space/ao-space/gt:server-v2.0.7
     <<: *restart_policy
     healthcheck:
       <<: *healthcheck_defaults
@@ -107,7 +107,7 @@ services:
     <<: *logging_defaults
   aoplatform-services:
     container_name: aoplatform-services
-    image: hub.eulix.xyz/ao-space/platform-base:v1.0.0
+    image: registry.ao.space/ao-space/platform-base:v1.0.1
     <<: *restart_policy
     healthcheck:
       <<: *healthcheck_defaults
@@ -134,7 +134,7 @@ services:
     <<: *logging_defaults
   aoplatform-nginx:
     container_name: aoplatform-nginx
-    image: hub.eulix.xyz/ao-space/platform-nginx:v1.0.0
+    image: registry.ao.space/ao-space/platform-nginx:v1.0.1
     <<: *restart_policy
     healthcheck:
       <<: *healthcheck_defaults
@@ -157,7 +157,7 @@ services:
     <<: *logging_defaults
   aoplatform-mysql-update:
     container_name: aoplatform-mysql-update
-    image: hub.eulix.xyz/ao-space/platform-sql-update:v1.0.0
+    image: registry.ao.space/ao-space/platform-sql-update:v1.0.1
     mem_limit: 1024M
     mem_reservation: 256M
     cpus: 1
