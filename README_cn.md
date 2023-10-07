@@ -91,6 +91,19 @@ systemctl enable --now docker
 
 用户可直接使用已有的泛域名证书部署此服务，也可基于下述指南获取开源的泛域名证书（90天有效期）。
 
+使用已有泛域名证书需要包含以下几个域名
+
+```bash
+# 以域名为 ao.space 为例，需要以下七合一的泛域名证书
+ao.space
+*.ao.space
+*.res.ao.space
+*.upload.ao.space
+*.download.ao.space
+*.push.ao.space
+*.platform.ao.space
+```
+
 使用 [Certbot](https://certbot.eff.org/) 或 [acme.sh](https://acme.sh) 获取开源泛域名证书。此步骤获取的泛域名证书签发者为 letsencrypt.org 或 zerossl.com。
 
 ```bash
