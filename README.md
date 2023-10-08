@@ -92,6 +92,19 @@ If it is a zone host:
 
 Users can directly deploy this service using existing wild-domain certificates, or obtain open-source wild-domain certificates (with a 90 day validity period) based on the following guidelines.
 
+To use an existing wildcard domain certificate, you need to include the following domains:
+
+```bash
+# Using "ao.space" as an example, you need a wildcard domain certificate that covers the following seven domains:
+ao.space
+*.ao.space
+*.res.ao.space
+*.upload.ao.space
+*.download.ao.space
+*.push.ao.space
+*.platform.ao.space
+```
+
 Using [Certbot](https://certbot.eff.org/) or [acme.sh](https://acme.sh) obtain an open-source wild-domain certificate. The wild-domain certificate issuer obtained in this step is letsencrypt.org or zerossl.com.
 
 ```bash
